@@ -10,30 +10,33 @@ const videogameSchema = new mongoose.Schema(
       trim: true, 
       require: true,
       maxlength: 32,
+      index:true
     },
     description: {
       type: String,
       trim: true,
       require: true,
-      maxlength: 2000
+      maxlength: 2000,
+      index:true
     },
     price: {
       type: Number,
       trim: true,
       require: true,
       maxlength: 32,
+      index:true
     },
     category: {
       type: ObjectId,
       ref: 'Category',
-      require: true
+      require: true,
+      index:true
     },
     quantity: {
       type: Number,
     },
     photo: {
-      data: Buffer,
-      contentType: String
+      type: String,
     }
   },
   {timestamps: true}

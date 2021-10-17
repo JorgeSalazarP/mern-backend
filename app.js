@@ -22,6 +22,7 @@ require('./lib/connectMongoose');
 
 
 app.use('/api/category', require('./routes/category'));
+app.use('/api/videogame', require('./routes/videogame'));
 
 
 
