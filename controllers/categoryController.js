@@ -14,7 +14,6 @@ exports.create = async (req,res,next) =>{
 }
 
 exports.list = async (req,res,next) =>{
-
     try {
         const result = await Category.find();
         res.json(result);
